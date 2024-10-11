@@ -1,0 +1,112 @@
+.frame {
+  background-color: #f0f4f8;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.5s ease;
+}
+
+.calculator {
+  background-color: var(--calc-bg);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.display {
+  background-color: var(--display-bg);
+  color: var(--text-color);
+  font-size: 2em;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: pulse 3s infinite;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  font-size: 1.5em;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.operator {
+  background-color: var(--operator-bg);
+}
+
+.equal {
+  background-color: var(--equal-bg);
+  grid-column: span 2;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.light-theme {
+  --bg-color: #f0f4f8;
+  --calc-bg: #ffffff;
+  --display-bg: #e8ecef;
+  --button-bg: #d1e0e0;
+  --operator-bg: #90a8c3;
+  --equal-bg: #76b6c4;
+  --text-color: #2e2e2e;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --calc-bg: #1e1e1e;
+  --display-bg: #333333;
+  --button-bg: #555555;
+  --operator-bg: #006d77;
+  --equal-bg: #83c5be;
+  --text-color: #ffffff;
+}
+
+body {
+  --bg-color: #1e3a5f;
+  --calc-bg: #273c75;
+  --display-bg: #1c315d;
+  --button-bg: #305f72;
+  --operator-bg: #f3a683;
+  --equal-bg: #f7d794;
+  --text-color: #ffffff;
+}
